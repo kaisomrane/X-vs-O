@@ -49,37 +49,37 @@
 <body>
 	<script>
 
-	function myfunc(){
+	function myfunc(e){
 		console.log("je suis dans my function ");
-		document.getElementById("b1").value = "X";
-		document.getElementById("demo").innerHTML = "Hello JavaScript!"
+		document.getElementById(e.target.id).value = "X";
+		
 	}
 
 	</script>
 	<div id="main">
 		<h0>X vs O</h0>
 
-		<p id="demo">JavaScript can change HTML content.</p>
+	
 		<br><br>
-		<input type="text" id="b1" onclick="myfunc()" readonly>
+		<input type="text" id="b1" onclick="myfunc(event)" readonly>
 
-		<input type="text" id="b2" onclick="myfunc()" readonly>
+		<input type="text" id="b2" onclick="myfunc(event)" readonly>
 
-		<input type="text" id="b3" onclick="myfunc()" readonly>
+		<input type="text" id="b3" onclick="myfunc(event)" readonly>
 		<br><br>
 
-		<input type="text" id="b4" onclick="myfunc()" readonly>
+		<input type="text" id="b4" onclick="myfunc(event)" readonly>
 			
-		<input type="text" id="b5" onclick="myfunc()" readonly>
+		<input type="text" id="b5" onclick="myfunc(event)" readonly>
 
-		<input type="text" id="b6" onclick="myfunc()" readonly>
+		<input type="text" id="b6" onclick="myfunc(event)" readonly>
 		<br><br>
 
-		<input type="text" id="b7" onclick="myfunc()" readonly>
+		<input type="text" id="b7" onclick="myfunc(event)" readonly>
 
-		<input type="text" id="b8" onclick="myfunc()" readonly>
+		<input type="text" id="b8" onclick="myfunc(event)" readonly>
 
-		<input type="text" id="b9" onclick="myfunc()" readonly>
+		<input type="text" id="b9" onclick="myfunc(event)" readonly>
 		<br>
 		<button id="but" onclick="myfunc_2()">
 			STAR NEW GAME
