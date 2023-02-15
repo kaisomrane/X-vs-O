@@ -48,13 +48,31 @@
 	
 <body>
 	<script>
-
+		let tour="J1";
 	function myfunc(e){
 		console.log("je suis dans my function ");
+		if(tour=="J1"){
 		document.getElementById(e.target.id).value = "X";
+		tour="J2";
+		}
+		else{
+			document.getElementById(e.target.id).value = "O";
+		tour="J1";			
+		}
 		
 	}
+	function reset(e){
+		document.getElementById("b1").value = "";
+		document.getElementById("b2").value = "";
+		document.getElementById("b3").value = "";
+		document.getElementById("b4").value = "";
+		document.getElementById("b5").value = "";
+		document.getElementById("b6").value = "";
+		document.getElementById("b7").value = "";
+		document.getElementById("b8").value = "";
+		document.getElementById("b9").value = "";
 
+	}
 	</script>
 	<div id="main">
 		<h0>X vs O</h0>
@@ -81,7 +99,7 @@
 
 		<input type="text" id="b9" onclick="myfunc(event)" readonly>
 		<br>
-		<button id="but" onclick="myfunc_2()">
+		<button id="but" onclick="reset()">
 			STAR NEW GAME
 		</button>
 		</br>
